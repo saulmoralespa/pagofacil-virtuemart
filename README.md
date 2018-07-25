@@ -6,4 +6,4 @@
 
 Este plugin functiona para joomla con virtuemart”
 
-([Descargar plugin][https://github.com/saulmoralespa/pagofacil-virtuemart/releases/tag/1.0.0.zip]
+[Descargar plugin](https://github.com/saulmoralespa/pagofacil-virtuemart/releases/tag/1.0.0.zip)
