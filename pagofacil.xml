@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmpayment">
+    <name>Pago Facil</name>
+    <creationDate>July 13 2018</creationDate>
+    <author>Saul Morales Pacheco</author>
+    <authorUrl>https://saulmoralespa.com</authorUrl>
+    <copyright></copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.0.0</version>
+    <description>Pago Facil</description>
+    <files>
+        <filename plugin="pagofacil">pagofacil.php</filename>
+        <folder>language</folder>
+        <folder>pagofacil</folder>
+        <folder>images</folder>
+    </files>
+    <media folder="images" destination="/images/stories/virtuemart/payment/">
+        <filename>pagofacil.png</filename>
+    </media>
+    <languages>
+        <language tag="es-ES">es-Es.plg_vmpayment_pagofacil.ini</language>
+    </languages>
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/plugins/vmpayment/pagofacil/pagofacil/fields">
+            <field type="getpagofacil" default=""/>
+                <field type="text" name="id_sucursal"  size="50" label="VMPAYMENT_PAGOFACIL_ID_SUCURSAL" default="" description="VMPAYMENT_PAGOFACIL_ID_SUCURSAL_DESCRIPTION" />
+                <field type="spacer" default="" level="level1" />
+                <field type="text" name="id_usuario"  size="50" label="VMPAYMENT_PAGOFACIL_ID_USUARIO" default="" description="VMPAYMENT_PAGOFACIL_ID_USUARIO_DESCRIPTION" />
+                <field type="spacer" default="" level="level1" />
+                <field type="text" name="id_sucursal_test"  size="50" label="VMPAYMENT_PAGOFACIL_ID_SUCURSAL_TEST" default="" description="VMPAYMENT_PAGOFACIL_ID_SUCURSAL_DESCRIPTION_TEST" />
+                <field type="spacer" default="" level="level1" />
+                <field type="text" name="id_usuario_test"  size="50" label="VMPAYMENT_PAGOFACIL_ID_USUARIO_TEST" default="" description="VMPAYMENT_PAGOFACIL_ID_USUARIO_DESCRIPTION_TEST" />
+                <field type="spacer" default="" level="level1" />
+                <field name="enviroment" type="radio" label="VMPAYMENT_PAGOFACIL_ENVIROMENT" description="VMPAYMENT_PAGOFACIL_ENVIROMENT_DESCRIPTION" >
+                    <option value="0">COM_VIRTUEMART_NO</option>
+                    <option value="1">COM_VIRTUEMART_YES</option>
+                </field>
+                <field type="spacer" default="" level="level1" />
+                <field name="min_amount" type="text"  label="Monto minimo" description="Monto minimo" />
+                <field type="spacer" default="" level="level1" />
+                <field name="max_amount" type="text"  label="Importe Máximo" description="Importe Máximo" />
+                <field name="tax_id" type="vmtaxes" scope="com_virtuemart"  label="Impuesto" description="Impuesto" />
+            </fieldset>
+        </fields>
+    </vmconfig>
+</extension>
